@@ -1,4 +1,3 @@
-configs
-=======
+# configs
 
-Archivos de configuracion varios.
+Scripts and util config files :)

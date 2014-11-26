@@ -10,8 +10,8 @@ TARGET_REQUEST=$1
 ####
 
 
-OFCDevBox="/Users/mayoralito/internetbrands.com/smb/OFCDevBox"
-OFCDevDir="/public/templates/responsive-templates"
+OFCDevBox="/var/www/"
+OFCDevDir="/proyect_name/"
 
 PULL1="git pull --recurse-submodules";
 PULL2="git submodule foreach git checkout master"
@@ -24,59 +24,12 @@ _d="$(pwd)"
 ####
 ## Functions
 ####
-update_nolo() {
-	
-	UPDATE_DIR="/nolo"
-	FULL_PATH="$OFCDevBox$OFCDevDir$UPDATE_DIR"
-	cd $FULL_PATH
-	# cd /Users/mayoralito/internetbrands.com/smb/OFCDevBox/nolo
-	
-	echo "Updating $FULL_PATH submodules..."
-
-	$PULL1
-	$PULL2
-	$PULL3
-
-	echo "done! " $'\360\237\215\273'
-}
-
-update_ofc() {
-	UPDATE_DIR="/officite"
-	FULL_PATH="$OFCDevBox$OFCDevDir$UPDATE_DIR"
-	cd $FULL_PATH
-	# cd /Users/mayoralito/internetbrands.com/smb/OFCDevBox/nolo
-	
-	echo "Updating $FULL_PATH submodules..."
-
-	$PULL1
-	$PULL2
-	$PULL3
-
-	echo "done! " $'\360\237\215\273'
-}
-
-update_edoc() {
-	UPDATE_DIR="/edoctors"
-	FULL_PATH="$OFCDevBox$OFCDevDir$UPDATE_DIR"
-	cd $FULL_PATH
-	# cd /Users/mayoralito/internetbrands.com/smb/OFCDevBox/nolo
-	
-	echo "Updating $FULL_PATH submodules..."
-
-	$PULL1
-	$PULL2
-	$PULL3
-
-	echo "done! " $'\360\237\215\273'
-}
-
 update_branch() {
 	
 	WOoT=$1
 	UPDATE_DIR="/$WOoT"
 	FULL_PATH="$OFCDevBox$OFCDevDir$UPDATE_DIR"
 	cd $FULL_PATH
-	# cd /Users/mayoralito/internetbrands.com/smb/OFCDevBox/nolo
 	
 	echo "Updating $FULL_PATH submodules..."
 
